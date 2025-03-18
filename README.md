@@ -4,7 +4,7 @@ This project focuses on Lead Scoring for X Education, an online course provider.
 
 Approach:
 Data Preprocessing: Cleaned missing values, handled categorical variables, and performed feature selection.
-EDA & Insights: Identified key features affecting lead conversion (e.g., total time spent on the website).
+EDA & Insights: Identified key features affecting lead conversion (like the total time spent on the website).
 Model Training & Evaluation: Implemented Logistic Regression, optimized the classification threshold, and evaluated using Precision, Recall, and ROC-AUC Score.
 
 Key Findings & Business Impact:
@@ -14,5 +14,5 @@ Threshold tuning allows flexibility—adjusting the score can focus on high-valu
 
 Final Recommendations:
 Sales teams should focus on leads with scores above 80 for higher conversions.
-Periodically adjust the threshold based on business goals (volume vs. quality).
+Periodically adjust the threshold based on business goals (volume vs quality).
 Future improvements can explore advanced models (XGBoost, Random Forest) and deeper customer segmentation.
