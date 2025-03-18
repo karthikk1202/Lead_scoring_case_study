@@ -10,7 +10,7 @@ Model Training & Evaluation: Implemented Logistic Regression, optimized the clas
 Key Findings & Business Impact:
 Optimized Model Achieves 91% Accuracy & 0.96 AUC Score.
 Lead Scores Help Prioritize High-Potential Customers, improving conversion rates.
-Threshold tuning allows flexibility—adjusting the score can focus on high-value leads or maximize overall conversions.
+Threshold tuning allows flexibility adjusting the score can focus on high-value leads or maximize overall conversions.
 
 Final Recommendations:
 Sales teams should focus on leads with scores above 80 for higher conversions.
