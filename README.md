@@ -1,18 +1,56 @@
-# Lead_scoring_case_study
-Project Overview:
-This project focuses on Lead Scoring for X Education, an online course provider. The goal is to build a Logistic Regression model to predict which leads are most likely to convert into paying customers, improving the company's sales efficiency.
+# Lead Scoring Case Study  
 
-Approach:
-Data Preprocessing: Cleaned missing values, handled categorical variables, and performed feature selection.
-EDA & Insights: Identified key features affecting lead conversion (like the total time spent on the website).
-Model Training & Evaluation: Implemented Logistic Regression, optimized the classification threshold, and evaluated using Precision, Recall, and ROC-AUC Score.
+This project was conducted for X Education, an online course provider, to optimize their sales process by assigning scores to leads. The aim was to identify high-potential leads, improve conversion rates, and make the sales process more efficient.  
 
-Key Findings & Business Impact:
-Optimized Model Achieves 91% Accuracy & 0.96 AUC Score.
-Lead Scores Help Prioritize High-Potential Customers, improving conversion rates.
-Threshold tuning allows flexibility adjusting the score can focus on high-value leads or maximize overall conversions.
+## Problem Statement  
+X Education receives thousands of leads daily through website forms, referrals, and marketing campaigns. However, only about 30% of these leads typically convert. The objective is to build a predictive model that assigns a Lead Score to each lead, indicating the probability of conversion, so that the sales team can focus on the most promising ones:contentReference[oaicite:0]{index=0}.  
 
-Final Recommendations:
-Sales teams should focus on leads with scores above 80 for higher conversions.
-Periodically adjust the threshold based on business goals (volume vs quality).
-Future improvements can explore advanced models (XGBoost, Random Forest) and deeper customer segmentation.
+## Dataset and Preprocessing  
+- Dataset: 9,240 leads with 37 features (numerical and categorical).  
+- Missing values: Columns with excessive missing values dropped; others imputed using mode.  
+- Encoding: Converted categorical features into numeric variables.  
+- Feature Scaling: Standardized numerical features.  
+- Train-test split: 70% training, 30% testing:contentReference[oaicite:1]{index=1}.  
+
+## Approach  
+1. Explored data to identify key behavioral and demographic patterns.  
+2. Built Logistic Regression as the primary model (Decision Trees were tested but found to overfit).  
+3. Validated the model using accuracy, ROC-AUC, and precision-recall tradeoffs.  
+4. Selected an optimal probability threshold of 0.42 to balance precision and recall:contentReference[oaicite:2]{index=2}.  
+
+## Model Performance  
+- Accuracy: ~91% on test data  
+- ROC-AUC Score: 0.96 (indicating strong predictive power)  
+- Precision and Recall balanced at chosen threshold:contentReference[oaicite:3]{index=3}  
+
+## Key Findings  
+Top Numerical Features:
+- Total Time Spent on Website → higher time = higher conversion chance  
+- Lead Origin → API and Landing Page Submission leads convert better  
+- Last Activity → engagement via emails/SMS boosts conversion:contentReference[oaicite:4]{index=4}  
+
+Top Categorical Features: 
+- Lead Source → Organic Search, Direct Traffic, and Google generate more converting leads  
+- Lead Quality → "High" and "Might Be" are more promising  
+- Specialization → Finance and Banking fields have higher conversions:contentReference[oaicite:5]{index=5}  
+
+## Strategic Recommendations  
+- Aggressive Conversion (intern hiring period): Lower lead score threshold to 30–40, prioritize high-engagement leads, and apply multi-touch campaigns (calls + emails + SMS).  
+- Efficiency Mode (after targets met): Raise threshold to 80+, prioritize referral leads, and automate follow-ups before assigning sales calls:contentReference[oaicite:6]{index=6}.  
+
+## Conclusion  
+- Data quality is critical; preprocessing was key to model reliability.  
+- User behavior (time spent, activity) plays a major role in lead conversion.  
+- Logistic Regression was chosen for its simplicity, interpretability, and strong performance.  
+- By implementing this model, X Education can potentially increase conversions by 10–20% while reducing wasted sales efforts:contentReference[oaicite:7]{index=7}.  
+
+## Tech Stack  
+- Python (Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn)  
+- Jupyter Notebook for model building  
+- PDF reports and PPT presentations for documentation  
+
+## Applications  
+- Helps sales teams prioritize leads effectively  
+- Improves conversion rates while reducing wasted calls  
+- Supports marketing in targeting high-quality sources  
+- Provides actionable insights for resource allocation and business growth  
